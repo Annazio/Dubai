@@ -1,1 +1,1 @@
-## [OPEN PROJECT] ("https://annazio.github.io/Dubai/")
+## [OPEN PROJECT](https://annazio.github.io/Dubai/)
