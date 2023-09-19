@@ -1,15 +1,18 @@
  import { NavLink } from 'react-router-dom'
 import Logo from '../Logo/Logo'
 import  s from './Header.module.css'
-import { nav_links } from '../../data/nav.links'
 import ButtonUI from "../UI/ButtonUI/ButtonUI";
 import { useState } from 'react';
+import { data_de } from '../../data/data_de';
+import { data_en } from '../../data/data_en';
 
 export default function Header() {
-  const [isLang_active, setLangActive] =useState(false);
-  const handleClick = () => {
+  const [activeLang, setActiveLang] =useState('en');
+  
+  const nav_links = activeLang === "en" ? data_en.nav_links : data_de.nav_links;
+  const header_btn = activeLang === "en" ? data_en.header_btn : data_de.header_btn;
 
-  }
+  
   return (
     <header className={s.header}>
       <div className="container">
@@ -31,10 +34,15 @@ export default function Header() {
           </nav>
           </div>
           <div className={s.header_right}>
-          <ButtonUI text="Book a consultation" />
+          <ButtonUI text={header_btn} />
             <div className={s.lang_wrapper}>
-              <button className={s.lang_item} onClick={handleClick}>EN</button>
-              <button className={s.lang_item} onClick={handleClick}>DE</button>
+              <button 
+              className={`${s.lang_item} ${
+                s[activeLang === "en" ? "active" : ""] || ""
+            }`} onClick={() => setActiveLang("en")}>EN</button>
+              <button className={`${s.lang_item} ${
+                s[activeLang === "de" ? "active" : ""] || ""
+            }`} onClick={() => setActiveLang("de")}>DE</button>
             </div>
             <span className={s.phone}>+7 (212) 674-25-10</span>
           </div>

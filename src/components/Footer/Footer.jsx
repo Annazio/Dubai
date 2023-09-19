@@ -11,7 +11,7 @@ export default function Footer() {
             <div className="options_wrapper">
               {/* в фигурных скобках классы */}
               <div className="buy">
-                <ul className="buy_list">
+                <ul className="buy_list"> Buy
                   <li>Apartment in Dubai</li>
                   <li>House in Dubai</li>
                   <li>Apartments in Dubai</li>
