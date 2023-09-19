@@ -1,7 +1,21 @@
 import Logo from '../Logo/Logo'
 import  s from './Footer.module.css'
+import { NavLink } from 'react-router-dom'
+import { useState } from 'react';
+import { data_de } from '../../data/data_de';
+import { data_en } from '../../data/data_en';
+import ButtonUI from '../UI/ButtonUI/ButtonUI';
 
 export default function Footer() {
+  const [activeLang, setActiveLang] =useState('en');
+  
+  const buy_links = activeLang === "en" ? data_en.buy_links : data_de.buy_links;
+  const services_links = activeLang === "en" ? data_en.services_links : data_de.services_links;
+  const information_links = activeLang === "en" ? data_en.information_links : data_de.information_links;
+  const about_company_links = activeLang === "en" ? data_en.about_company_links : data_de.company_links;
+  const contact_links = activeLang === "en" ? data_en.contact_links : data_de.contact_links;
+  const header_btn = activeLang === "en" ? data_en.header_btn : data_de.header_btn;
+
   return (
     <footer className={s.footer}>
       <div className="container">
@@ -12,37 +26,55 @@ export default function Footer() {
               {/* в фигурных скобках классы */}
               <div className="buy">
                 <ul className="buy_list"> Buy
-                  <li>Apartment in Dubai</li>
-                  <li>House in Dubai</li>
-                  <li>Apartments in Dubai</li>
-                  <li>Loft in Dubai</li>
-                  <li>Penthouse in Dubai</li>
-                  <li>Villa in Dubai</li>
+                {buy_links.map((element) => (
+                                    <li key={element.id}>
+                                        <a href={element.link}>{element.title}</a>
+                                    </li>
+                                ))}
                 </ul>
               </div>   
 
               <div className="services">   
-                <ul className="services_list">
-                  <li>Property management in Dubai, UAE</li>
-                  <li>Sell ​​property in Dubai, UAE</li>
-                  <li>Rent property in Dubai, UAE</li>
-                  <li>Investments in Dubai, UAE</li>
-                  <li>Real estate for cryptocurrency in Dubai</li>
-                  <li>Moving to Dubai, UAE</li>
+                <ul className="services_list"> Services
+                {services_links.map((element) => (
+                                    <li key={element.id}>
+                                        <a href={element.link}>{element.title}</a>
+                                    </li>
+                                ))}
                 </ul>
               </div>
 
               <div className="information">
-                <ul className="information_list">
-                  <li><a href="">Video</a></li>
-                  <li><a href="">Podcasts</a></li>
-                  <li><a href="">Laws</a></li>
-                  <li><a href="">Questions and answers</a></li>
-                  <li><a href="">Books</a></li>
-                  <li><a href="">Articles</a></li>
+                <ul className="information_list"> Information
+                {information_links.map((element) => (
+                                    <li key={element.id}>
+                                        <a href={element.link}>{element.title}</a>
+                                    </li>
+                                ))}
                 </ul>
               </div>
 
+
+              <div className="about_company">
+                <ul className="about_company_list"> About company
+                {about_company_links.map((element) => (
+                                    <li key={element.id}>
+                                        <a href={element.link}>{element.title}</a>
+                                    </li>
+                                ))}
+                </ul>
+              </div>
+
+              <div className="contact">
+                <ul className="contact_list"> Contact
+                {contact_links.map((element) => (
+                                    <li key={element.id}>
+                                        <a href={element.link}>{element.title}</a>
+                                    </li>
+                                ))}
+                </ul>
+                <ButtonUI text={header_btn} />
+              </div>
 
             </div>
 
@@ -53,3 +85,4 @@ export default function Footer() {
     
   )
 }
+

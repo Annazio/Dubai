@@ -39,4 +39,36 @@ export const data_de ={
         },
     ],
     header_btn: "Beratungstermin",
+
+    buy_links: [{
+        id: 1,
+        title: "Appartment in Dubai",
+        link: "#",
+        },
+        {
+        id: 2,
+        title: "Haus in Dubai",
+        link: "#",
+        },
+        {
+        id: 3,
+        title: "Appartments in Dubai",
+        link: "#",
+        },
+        {
+        id: 4,
+        title: "Loft in Dubai",
+        link: "#",
+        },
+        {
+        id: 5,
+        title: "Penthouse in Dubai",
+        link: "#",
+        },
+        {
+        id: 6,
+        title: "Villa in Dubai",
+        link: "#",
+        },
+    ]
 };
