@@ -22,10 +22,10 @@ export default function Footer() {
         <div className={s.footer_wrapper}>
           <Logo />
 
-            <div className="options_wrapper">
-              {/* в фигурных скобках классы */}
-              <div className="buy">
-                <ul className="buy_list"> Buy
+            <div className={s.options_wrapper}>
+              
+              <div className={s.buy}>
+                <ul className={s.buy_list}> Buy
                 {buy_links.map((element) => (
                                     <li key={element.id}>
                                         <a href={element.link}>{element.title}</a>
@@ -77,7 +77,6 @@ export default function Footer() {
               </div>
 
             </div>
-
 
         </div>
       </div>

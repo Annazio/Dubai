@@ -70,5 +70,109 @@ export const data_de ={
         title: "Villa in Dubai",
         link: "#",
         },
+    ],
+    services_links: [
+        {
+        id: 1,            
+        title: "Immobilienverwaltung in Dubai, VAE",
+        link: "#",
+         },
+        {
+        id: 2,
+        title: "Immobilien in Dubai, VAE verkaufen",
+        link: "#",
+        },
+        {
+        id: 3,
+        title: "Immobilien in Dubai, VAE mieten",
+        link: "#",
+        },
+        {
+        id: 4,
+        title: "Investitionen in Dubai, VAE",
+        link: "#",
+        },
+        {
+        id: 5,
+        title: "Immobilien in Dubai für Kryptowährung",
+        link: "#",
+        },
+        {
+        id: 6,
+        title: "Umzug nach Dubai, VAE",
+        link: "#",
+        }
+    ],
+
+    information_links: [
+        {
+        id: 1,            
+        title: "Video",
+        link: "#",
+         },
+        {
+        id: 2,
+        title: "Podcasts",
+        link: "#",
+        },
+        {
+        id: 3,
+        title: "Rechtsvorschriften",
+        link: "#",
+        },
+        {
+        id: 4,
+        title: "Fragen und Antworten",
+        link: "#",
+        },
+        {
+        id: 5,
+        title: "Bücher",
+        link: "#",
+        },
+        {
+        id: 6,
+        title: "Artikel",
+        link: "#",
+        }
+    ],
+    about_company_links: [
+        {
+        id: 1,            
+        title: "Jobs",
+        link: "#",
+         },
+        {
+        id: 2,
+        title: "Geschichte",
+        link: "#",
+        },
+        {
+        id: 3,
+        title: "Lizenzen",
+        link: "#",
+        },
+        {
+        id: 4,
+        title: "Warum wir",
+        link: "#",
+        },
+        {
+        id: 5,
+        title: "Immobilienagentur",
+        link: "#",
+        }
+    ],
+    contact_links: [
+        {
+        id: 1,            
+        title: "964 Worthington Drive Dubai, UAE",
+        link: "#",
+         },
+        {
+        id: 2,
+        title: "dubairealty@mail.com",
+        link: "#",
+        }
     ]
 };
