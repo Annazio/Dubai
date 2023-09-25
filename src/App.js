@@ -6,10 +6,17 @@ import MainPage from "./pages/MainPage/MainPage"
 import BlogPage from "./pages/BlogPage/BlogPage"
 import ServicesPage from "./pages/ServicesPage/ServicesPage"
 import ContactPage from "./pages/ContactPage/ContactPage"
+import { LangContext } from './context/LangContext';
+import { useState } from 'react';
 
 function App() {
+
+  const [activeLang, setActiveLang] = useState("en");
+
+
   return (
     <div className="app">
+    <LangContext.Provider value={{ activeLang: activeLang, setActiveLang: setActiveLang}}>
      <Header />
      <Routes>
        <Route path="/" element={<MainPage />} />
@@ -19,6 +26,7 @@ function App() {
      </Routes>
 
      <Footer />
+     </LangContext.Provider>
      
 
     </div>
@@ -27,4 +35,3 @@ function App() {
 
 export default App;
 
-// hjhjk

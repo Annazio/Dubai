@@ -6,6 +6,7 @@
   --black: #000;
   --dark: #272727;
   --white: #fff;
+  --white-30: rgba(255, 255, 255, .3);
   --light: #e8e8e8;
   --brand: #fcd54c;
   
@@ -18,7 +19,6 @@ ul, ol, li{
 
 a{
   text-decoration: none;
-  color: var(--light)
 }
 button{
   border: none;

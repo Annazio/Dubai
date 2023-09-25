@@ -2,12 +2,13 @@
 import Logo from '../Logo/Logo'
 import  s from './Header.module.css'
 import ButtonUI from "../UI/ButtonUI/ButtonUI";
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { data_de } from '../../data/data_de';
 import { data_en } from '../../data/data_en';
+import { LangContext } from '../../context/LangContext';
 
 export default function Header() {
-  const [activeLang, setActiveLang] =useState('en');
+  const {activeLang, setActiveLang} = useContext(LangContext);
   
   const nav_links = activeLang === "en" ? data_en.nav_links : data_de.nav_links;
   const header_btn = activeLang === "en" ? data_en.header_btn : data_de.header_btn;
