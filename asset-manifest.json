@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Dubai/static/css/main.c08764f8.css",
-    "main.js": "/Dubai/static/js/main.062e7ced.js",
+    "main.css": "/Dubai/static/css/main.0d69a547.css",
+    "main.js": "/Dubai/static/js/main.300dd401.js",
     "index.html": "/Dubai/index.html",
-    "main.c08764f8.css.map": "/Dubai/static/css/main.c08764f8.css.map",
-    "main.062e7ced.js.map": "/Dubai/static/js/main.062e7ced.js.map"
+    "main.0d69a547.css.map": "/Dubai/static/css/main.0d69a547.css.map",
+    "main.300dd401.js.map": "/Dubai/static/js/main.300dd401.js.map"
   },
   "entrypoints": [
-    "static/css/main.c08764f8.css",
-    "static/js/main.062e7ced.js"
+    "static/css/main.0d69a547.css",
+    "static/js/main.300dd401.js"
   ]
 }
