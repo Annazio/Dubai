@@ -1,42 +1,37 @@
-import React, { useContext } from 'react'
-import { LangContext } from '../../context/LangContext';
-import { data_de } from '../../data/data_de';
-import { data_en } from '../../data/data_en';
-import { images } from '../../data/images';
-import s from './MainInfoSection'
+import React, { useContext } from "react";
+import { LangContext } from "../../context/LangContext";
+import { data_de } from "../../data/data_de";
+import { data_en } from "../../data/data_en";
+import s from "./MainInfoSection.module.css";
 
 export default function MainInfoSection() {
+    const { activeLang } = useContext(LangContext);
 
-    const {activeLang} = useContext(LangContext)
+    const statement =
+        activeLang === "en"
+            ? data_en.main_section_statement
+            : data_de.main_section_statement;
 
-  const statement = activeLang === "en" ? data_en.statement : data_de.statement;
-  const author = activeLang === "en" ? data_en.author : data_de.author;
-  
-  const mainInfoSectionImages = images;
-    
+    const main_info_list =
+        activeLang === "en"
+            ? data_en.main_section_items
+            : data_de.main_section_items;
 
-  
-
-  return (
-    <div className={s.statement}>
-        {
-          statement.map((elem) => (
-            <p key={elem.id}>{elem.text} <span>{elem.title}</span></p>))
-        }
-        <div className={s.images}>
-            {
-               mainInfoSectionImages.map((elem) => (
-                    <img key={elem.id} src={elem.image} alt={elem.alt}/>
-                ))
-            } 
+    return (
+        <div className={s.info_section}>
+            <div className="container">
+                <p>
+                    {statement.text} <span>{statement.author}</span>
+                </p>
+                <ul className={s.images}>
+                    {main_info_list.map((elem) => (
+                        <li key={elem.id}>
+                            <img src={elem.img} alt={elem.alt} />
+                            <p>{elem.text}</p>
+                        </li>
+                    ))}
+                </ul>
+            </div>
         </div>
-        <div className={s.author}>
-            {
-              author.map((elem) => (
-                <p key={elem.id}>{elem.text}</p>))
-            }
-        </div>
-    </div>
-  )
+    );
 }
-
