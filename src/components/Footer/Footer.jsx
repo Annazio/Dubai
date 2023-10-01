@@ -6,6 +6,7 @@ import { data_de } from '../../data/data_de';
 import { data_en } from '../../data/data_en';
 import ButtonUI from '../UI/ButtonUI/ButtonUI';
 import { LangContext } from '../../context/LangContext';
+import FooterBottom from '../FooterBottom/FooterBottom';
 
 export default function Footer() {
   const {activeLang} = useContext(LangContext)
@@ -48,7 +49,9 @@ export default function Footer() {
                     ))}
                 </ul>
             </div>
+            <FooterBottom />
         </div>
+        
     </footer>
 )
                                 }

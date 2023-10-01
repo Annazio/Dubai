@@ -1,10 +1,11 @@
-import TitleSection from '../../MainPageComponents/TitleSection/TitleSection'
-import  s from './MainPage.module.css'
+import MainInfoSection from '../../components/MainInfoSection/MainInfoSection'
+import OurExpertise from '../../components/OurExpertise/OurExpertise'
 
 export default function MainPage() {
   return (
     <div>
-       <TitleSection />
+       <OurExpertise />
+       <MainInfoSection />
     </div>
   )
 }
